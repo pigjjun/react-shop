@@ -1,0 +1,73 @@
+.container {
+  max-width: 100%;
+  height: 500px;
+}
+
+.carousel .slide img {
+  max-height: 500px;
+  min-height: 500px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  display: block;
+}
+
+.carousel .slide .legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  padding: 15px 15px 15px 25px;
+  border-radius: 10%;
+  top: 50%;
+  left: 55%;
+  transform: translate(-10%, -50%);
+  width: 20%;
+  min-width: 300px;
+  max-height: 50%;
+  background-color: #38393a;
+}
+
+.carousel .slide .legend h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.carousel .slide .legend p {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.carousel .slide .legend a {
+  font-weight: bold;
+}
+
+.carousel .slide .legend .link-button {
+  background-color: #4a67f7;
+  color: #ffffff;
+  font-size: 1.2rem;
+  height: 50px;
+}
+
+.carousel .control-dots {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel .control-dots li {
+  list-style: none;
+}
+
+.carousel .control-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: lightcoral;
+  margin: 0 8px;
+}
+
+.carousel .control-dots li.slick-active .dot {
+  background-color: #fbb03b;
+}

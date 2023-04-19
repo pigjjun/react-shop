@@ -1,0 +1,17 @@
+.footer-container {
+  height: 300px;
+}
+
+.credit-cards {
+  margin: 2rem auto;
+}
+
+.credit-cards-image {
+  width: 200px;
+}
+
+.sns-logo {
+  width: 2rem;
+  margin: 0.5rem;
+  fill: #595959;
+}
