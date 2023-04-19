@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./Pages/main";
+import Main from "./Pages/Main";
 import Clothing from "./Pages/Clothing";
 import Jewelery from "./Pages/Jewelery";
 import Electronics from "./Pages/Electronics";
