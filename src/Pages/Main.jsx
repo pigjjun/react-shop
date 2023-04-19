@@ -2,7 +2,7 @@ import React from "react";
 import MainCarousel from "../components/MainCarousel/MainCarousel";
 import ProductList from "../components/Product/ProductList";
 
-export default function Main() {
+function Main() {
   return (
     <div>
       <MainCarousel />
@@ -10,3 +10,5 @@ export default function Main() {
     </div>
   );
 }
+
+export default Main;
