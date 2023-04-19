@@ -15,7 +15,7 @@ const Footer = () => {
         <a href="https://www.facebook.com/">
           <img src="/facebook.svg" alt="Facebook" className="sns-logo" />
         </a>
-        <a href="https://www.instagram.com/">
+        <a href="https://www.instagram.com/pigjjun">
           <img src="/instagram.svg" alt="Instagram" className="sns-logo" />
         </a>
         <a href="https://github.com/">

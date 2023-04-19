@@ -26,7 +26,7 @@ const Navbar = ({ isDarkMode, handleToggleDarkMode }) => {
       </div>
       <div className="navbar__logo">
         <Link to="/" className="navbar__logo-link">
-          <p>React Shop</p>
+          <p>Pigjjun Shop</p>
         </Link>
       </div>
       <div className={`navbar__menu ${menuOpen ? "navbar__menu--show" : ""}`}>
