@@ -19,7 +19,7 @@ const MainCarousel = () => {
         dynamicHeight={false}
       >
         <div>
-          <img src="src/assets/clothing.png" alt="clothing" />
+          <img src="/clothing.png" alt="clothing" />
           <div className="legend">
             <h2>다양한 청바지</h2>
             <p>찢어진 청바지 물빠진 청바지를 둘러보세요!</p>
@@ -29,7 +29,7 @@ const MainCarousel = () => {
           </div>
         </div>
         <div>
-          <img src="src/assets/electronics.jpg" alt="electronics" />
+          <img src="/electronics.jpg" alt="electronics" />
           <div className="legend">
             <h2>선명한 모니터</h2>
             <p>내 업무환경을 좀 더 효율적으로!</p>
@@ -39,7 +39,7 @@ const MainCarousel = () => {
           </div>
         </div>
         <div>
-          <img src="src/assets/grocery.jpg" alt="grocery" />
+          <img src="/grocery.jpg" alt="grocery" />
           <div className="legend">
             <h2>새벽 배송</h2>
             <p>신선한 식재료를 다음 날 바로 문 앞에!</p>
