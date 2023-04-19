@@ -1,7 +1,7 @@
 import { FaBars, FaMoon, FaShoppingCart, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "../../styles/Navbar.css";
+import "../../styles/NavBar.css";
 import ProductSearch from "./ProductSearch";
 
 const Navbar = ({ isDarkMode, handleToggleDarkMode }) => {
