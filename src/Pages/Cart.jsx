@@ -66,7 +66,7 @@ function Cart() {
       }
       return item;
     });
-    constupdatedCart = updatedCartItems.map((item) => ({
+    const updatedCart = updatedCartItems.map((item) => ({
       id: item.id,
       count: item.count,
     }));
@@ -81,7 +81,7 @@ function Cart() {
 
   const handleBuyButtonClick = () => {
     setModalOpen(true);
-    setItemIdToRemove(null); // itemIdToRemove 값을 초기화
+    setItemIdToRemove(null);
   };
 
   const numItems = cartItems.reduce((acc, item) => acc + item.count, 0);
