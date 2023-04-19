@@ -106,18 +106,16 @@
 }
 
 /* Logo */
-.navbar__logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
 
 .navbar__logo-link {
   text-decoration: none;
   color: currentColor;
+  line-height: -20px;
 }
 
 .navbar__logo-link p {
   margin: 0;
+  font-size: 1.5rem;
 }
 
 .navbar__logo-link:hover {

@@ -24,12 +24,15 @@ function ProductDetail() {
       cart[index].count += 1;
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+
+    const count = JSON.parse(localStorage.getItem("cart"))?.length || 0;
+    window.dispatchEvent(new CustomEvent("cartUpdated", { detail: { count } }));
+
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    window.location.reload();
   };
 
   if (!product) {

@@ -14,7 +14,7 @@ const MainCarousel = () => {
         showStatus={false}
         showThumbs={false}
         showIndicators={true}
-        interval={30000}
+        interval={3000}
         swipeable={true}
         dynamicHeight={false}
       >

@@ -33,6 +33,9 @@ function Cart() {
     const updatedCart = cart.filter((item) => item.id !== id);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     setCart(updatedCart);
+    window.dispatchEvent(
+      new CustomEvent("cartUpdated", { detail: { count: updatedCart.length } })
+    );
     setModalOpen(false);
   };
 
@@ -63,7 +66,7 @@ function Cart() {
       }
       return item;
     });
-    const updatedCart = updatedCartItems.map((item) => ({
+    constupdatedCart = updatedCartItems.map((item) => ({
       id: item.id,
       count: item.count,
     }));
@@ -78,6 +81,7 @@ function Cart() {
 
   const handleBuyButtonClick = () => {
     setModalOpen(true);
+    setItemIdToRemove(null); // itemIdToRemove 값을 초기화
   };
 
   const numItems = cartItems.reduce((acc, item) => acc + item.count, 0);
@@ -86,8 +90,10 @@ function Cart() {
     localStorage.setItem("cart", JSON.stringify([]));
     setCart([]);
     setCartItems([]);
+    window.dispatchEvent(
+      new CustomEvent("cartUpdated", { detail: { count: 0 } })
+    );
     setModalOpen(false);
-    window.location.reload();
   };
   return (
     <div className="cart">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Pages/Main";
 import Clothing from "./Pages/Clothing";
@@ -47,7 +47,7 @@ function App() {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <BrowserRouter>
         <GlobalStyle />
-        <Navbar
+        <NavBar
           isDarkMode={isDarkMode}
           handleToggleDarkMode={handleToggleDarkMode}
         />

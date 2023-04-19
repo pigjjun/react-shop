@@ -4,17 +4,26 @@ import { useState, useEffect } from "react";
 import "../../styles/NavBar.css";
 import ProductSearch from "./ProductSearch";
 
-const Navbar = ({ isDarkMode, handleToggleDarkMode }) => {
-  const [cartCount, setCartCount] = useState(0);
+const NavBar = ({ isDarkMode, handleToggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
-    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartCount(cartItems.length);
+    const count = JSON.parse(localStorage.getItem("cart"))?.length || 0;
+    setCartCount(count);
+
+    window.addEventListener("cartUpdated", handleCartUpdated);
+    return () => {
+      window.removeEventListener("cartUpdated", handleCartUpdated);
+    };
   }, []);
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleCartUpdated = (event) => {
+    setCartCount(event.detail.count);
   };
 
   return (
@@ -71,7 +80,11 @@ const Navbar = ({ isDarkMode, handleToggleDarkMode }) => {
           <ProductSearch />
         </div>
         <div className="navbar__icon">
-          <Link to="/cart" className="navbar__cart">
+          <Link
+            to="/cart"
+            className="navbar__cart"
+            onClick={() => updateCartCount()} // 클릭할 때마다 카트 수량을 업데이트
+          >
             <FaShoppingCart />
             <span className="navbar__cart-badge">{cartCount}</span>
           </Link>
@@ -81,4 +94,4 @@ const Navbar = ({ isDarkMode, handleToggleDarkMode }) => {
   );
 };
 
-export default Navbar;
+export default NavBar;
