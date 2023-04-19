@@ -80,11 +80,7 @@ const NavBar = ({ isDarkMode, handleToggleDarkMode }) => {
           <ProductSearch />
         </div>
         <div className="navbar__icon">
-          <Link
-            to="/cart"
-            className="navbar__cart"
-            onClick={() => updateCartCount()} // 클릭할 때마다 카트 수량을 업데이트
-          >
+          <Link to="/cart" className="navbar__cart">
             <FaShoppingCart />
             <span className="navbar__cart-badge">{cartCount}</span>
           </Link>
